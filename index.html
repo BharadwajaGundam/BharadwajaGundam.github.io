@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bharadwaja Reddy Gundam | Biomedical Engineering Portfolio</title>
+<meta name="description" content="Portfolio of Bharadwaja Reddy Gundam, M.Sc. Medical Systems Engineering student, organised like a medical device lifecycle.">
+<style>
+:root{--bg:#070d17;--card:#0e1726;--line:#1d2b44;--tx:#e8eef8;--mut:#8da0bd;--g:#39f0a0;--am:#ffb454}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.65 "Times New Roman",Times,serif}
+.mono{font-family:"Times New Roman",Times,serif}
+button,input{font-family:inherit}
+a{color:var(--g);text-decoration:none}
+nav{position:sticky;top:0;z-index:20;background:#070d17ee;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav div{display:flex;gap:4px;overflow-x:auto;padding:10px 12px;justify-content:center;scrollbar-width:none}
+nav a{flex:none;color:var(--mut);font-size:14px;padding:4px 10px;border-radius:6px;letter-spacing:.04em}
+nav a.on{color:#04140d;background:var(--g)}
+#bar{height:2px;width:0;background:var(--g)}
+.hero{position:relative;min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:32px 20px;overflow:hidden}
+.ecg{position:absolute;left:0;right:0;top:50%;width:100%;height:220px;transform:translateY(-50%);opacity:.9}
+.ecg path{fill:none;stroke-width:2.2;vector-effect:non-scaling-stroke;stroke-linejoin:round}
+.ecg .base{stroke:#39f0a026}
+.ecg .run{stroke:var(--g);stroke-dasharray:.1 1;stroke-dashoffset:1;animation:run 4.5s linear infinite;filter:drop-shadow(0 0 6px var(--g))}
+@keyframes run{to{stroke-dashoffset:-.1}}
+.hero>*:not(.ecg){position:relative}
+.kick{color:var(--am);font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+h1{font-size:clamp(34px,8vw,68px);line-height:1.05;margin:10px 0 8px}
+.typed{font-size:clamp(16px,3vw,22px);min-height:1.7em;color:var(--g)}
+.typed:after{content:"_";animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.lead{max-width:620px;color:var(--mut);margin:14px auto 0;text-shadow:0 0 12px var(--bg),0 0 24px var(--bg)}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.btn{padding:10px 20px;border-radius:8px;border:1px solid var(--g);color:var(--g);font-weight:600;cursor:pointer;background:#070d17;font-size:15px;transition:.2s}
+.btn.p{background:var(--g);color:#04140d}.btn:hover{transform:translateY(-2px);box-shadow:0 6px 22px #39f0a033}
+section{max-width:940px;margin:0 auto;padding:72px 20px}
+.stage{color:var(--am);font-size:12px;letter-spacing:.14em}
+h2{font-size:clamp(26px,5vw,36px);margin:4px 0 6px}
+.say{color:var(--mut);margin:0 0 26px;font-style:italic}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:var(--g)}
+.card h3{margin:0 0 2px;font-size:18px}.meta{color:var(--mut);font-size:13px;margin-bottom:8px}
+.tag{display:inline-block;margin:4px 4px 0 0;padding:1px 9px;border:1px solid var(--line);border-radius:6px;color:var(--g);font-size:12px}
+.limit{color:var(--am);font-size:13px;margin-top:8px}
+ul{margin:8px 0 0;padding-left:18px;color:var(--mut)}li{margin-bottom:4px}
+.label{border:2px solid var(--tx);border-radius:6px;padding:0;max-width:640px;background:#0b1322}
+.label div{display:flex;gap:14px;padding:10px 16px;border-bottom:1px solid var(--line);font-size:14px}
+.label div:last-child{border:0}.label b{flex:0 0 150px;color:var(--am);font-weight:500;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding-top:2px}
+.tl{border-left:2px solid var(--line);padding-left:22px}
+.tl .card{margin-bottom:14px;position:relative}.tl .card:before{content:"";position:absolute;left:-31px;top:22px;width:10px;height:10px;border-radius:50%;background:var(--g);box-shadow:0 0 0 4px var(--bg)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--am);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase}td:first-child{color:var(--tx);white-space:nowrap}td+td{color:var(--mut)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+footer{text-align:center;color:var(--mut);padding:32px 20px;font-size:13px}
+#fab{position:fixed;right:18px;bottom:18px;z-index:30;height:54px;padding:0 20px;border-radius:27px;border:0;background:var(--g);color:#04140d;font-weight:700;font-size:15px;cursor:pointer;box-shadow:0 8px 24px #0009;animation:pu 2.6s infinite}
+@keyframes pu{0%{box-shadow:0 0 0 0 #39f0a066}70%{box-shadow:0 0 0 16px #39f0a000}100%{box-shadow:0 0 0 0 #39f0a000}}
+#chat{position:fixed;right:18px;bottom:84px;z-index:30;width:min(380px,calc(100vw - 36px));height:min(540px,70vh);display:none;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 20px 50px #000a}
+#chat.open{display:flex;animation:up .3s}@keyframes up{from{opacity:0;transform:translateY(12px)}}
+#ch{padding:12px 16px;border-bottom:1px solid var(--line);font-weight:600}#ch small{display:block;color:var(--mut);font-weight:400;font-size:12px}
+#msgs{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:8px}
+.m{max-width:88%;padding:8px 12px;border-radius:10px;font-size:14px;animation:up .25s;white-space:pre-line}
+.m.b{background:#16223a;align-self:flex-start}.m.u{background:var(--g);color:#04140d;align-self:flex-end}
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 12px 8px}
+.chips button{background:none;border:1px solid var(--line);color:var(--mut);border-radius:6px;padding:4px 10px;font-size:12px;cursor:pointer}.chips button:hover{border-color:var(--g);color:var(--g)}
+#f{display:flex;border-top:1px solid var(--line)}#q{flex:1;background:none;border:0;color:var(--tx);padding:12px;font-size:15px;outline:0}
+#f button{background:none;border:0;color:var(--g);padding:0 16px;font-size:18px;cursor:pointer}
+@media(max-width:560px){.label div{flex-direction:column;gap:2px}.label b{flex:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.ecg .run{stroke-dasharray:none}}
+</style>
+</head>
+<body>
+<nav><div class="mono">
+<a href="#input">01 INPUT</a><a href="#output">02 OUTPUT</a><a href="#verification">03 VERIFICATION</a><a href="#validation">04 VALIDATION</a><a href="#dhf">05 HISTORY FILE</a><a href="#bom">06 BOM</a><a href="#followup">07 FOLLOW-UP</a></div><div id="bar"></div></nav>
+
+<header class="hero">
+<svg class="ecg" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
+<path class="base" pathLength="1" d="M0 110H150L170 100L190 110H300L320 135L345 20L375 195L395 110H430L460 85L500 110H700L720 100L740 110H850L870 135L895 20L925 195L945 110H980L1010 85L1050 110H1200"/>
+<path class="run" pathLength="1" d="M0 110H150L170 100L190 110H300L320 135L345 20L375 195L395 110H430L460 85L500 110H700L720 100L740 110H850L870 135L895 20L925 195L945 110H980L1010 85L1050 110H1200"/>
+</svg>
+<div class="kick mono">Open to internships, working student and research assistant roles</div>
+<h1>Bharadwaja Reddy Gundam</h1>
+<div class="typed mono" id="typed"></div>
+<p class="lead">I am a Master&rsquo;s student in Medical Systems Engineering looking for working student, internship and research assistant positions in biomedical engineering. I have built prototypes, tested clinical equipment and studied medical device regulation, so I can contribute to R&amp;D, imaging, quality or regulatory teams.</p>
+<div class="btns"><a class="btn p" href="#input">Start at the first stage</a><button class="btn" onclick="openChat()">Read the IFU</button></div>
+</header>
+
+<section id="input" class="rv"><div class="stage mono">STAGE 01 &middot; DESIGN INPUT</div><h2>What I started with</h2>
+<p class="say">Every device starts with a need. Mine was to work on medical technology, so this is the label.</p>
+<div class="label mono">
+<div><b>Intended purpose</b><span>Working student, internship and research assistant roles in biomedical engineering: R&amp;D, medical imaging, signal processing, regulatory affairs and quality</span></div>
+<div><b>Background</b><span>B.Tech Biomedical Engineering (India), now M.Sc. Medical Systems Engineering</span></div>
+<div><b>Manufactured in</b><span>Hyderabad, India. Currently based in Magdeburg, Germany</span></div>
+<div><b>Languages</b><span>English (fluent), German (A2)</span></div>
+<div><b>Evidence so far</b><span>2 conference papers, 1 job in medical equipment service, 1 summer school</span></div>
+</div></section>
+
+<section id="output" class="rv"><div class="stage mono">STAGE 02 &middot; DESIGN OUTPUT</div><h2>What I built</h2>
+<p class="say">Two prototypes, each with its limits written down next to it.</p>
+<div class="grid">
+<div class="card"><h3>Magnetic slime that retrieves swallowed objects</h3><div class="meta mono">B.Tech major project &middot; IEEE ICETEMS 2024</div>
+<p>A non-Newtonian slime steered by an electromagnet so it can curl around an object inside a GI-tract replica. The idea was mine, and I made the slime and ran most of the experiments. My team finished the laser-cut substrate design.</p>
+<span class="tag">electromagnet</span><span class="tag">biomaterials</span><span class="tag">soft robotics</span><div class="limit mono">Limit: concept study, no clinical testing</div></div>
+<div class="card"><h3>Smart Fitness Suit that corrects your curl</h3><div class="meta mono">ICETE 2023 &middot; Atlantis Press</div>
+<p>Two MPU6050 motion sensors and an ESP32 watch the arm during a bicep curl. A buzzer warns about the forearm and an LED about the upper arm. I built the prototype and set the gyroscope ranges from four test cases per sensor.</p>
+<span class="tag">ESP32</span><span class="tag">IMU</span><span class="tag">Arduino IDE</span><div class="limit mono">Limit: one exercise, small test set</div></div>
+</div></section>
+
+<section id="verification" class="rv"><div class="stage mono">STAGE 03 &middot; VERIFICATION</div><h2>Tested on real equipment</h2>
+<p class="say">Measured, documented, repeated.</p>
+<div class="tl">
+<div class="card"><h3>Biomedical Technician, Vardhaman Scientific &amp; Engineers</h3><div class="meta mono">Hyderabad &middot; 05/2024 to 11/2024</div>
+<ul><li>Calibrated and functionally tested BOD incubators, spectrophotometers and digital photometers, then wrote up the results.</li><li>Installed and troubleshot equipment at hospital sites and answered customers&rsquo; technical questions.</li><li>Sold and serviced ICU, operating theatre and blood bank equipment.</li></ul></div>
+<div class="card"><h3>Industrial training, critical care equipment</h3><div class="meta mono">AMTZ / Indian Biomedical Skill Consortium &middot; 01/2023 &middot; 62 hours</div>
+<ul><li>Completed the programme and earned 4 credit points.</li></ul></div>
+</div></section>
+
+<section id="validation" class="rv"><div class="stage mono">STAGE 04 &middot; VALIDATION</div><h2>Does it work for the people it is meant for?</h2>
+<p class="say">Master&rsquo;s coursework that asked this question about real devices and real papers.</p>
+<div class="grid">
+<div class="card"><h3>Cavaterm ablation system under EU MDR</h3><div class="meta mono">Team report of 6 &middot; 06/2026</div><p>Technical documentation study of a Class IIb balloon device. I wrote the clinical evaluation and study design (endpoints, MCID, sample size, sites) and the labeling and IFU section.</p><span class="tag">EU MDR 2017/745</span><span class="tag">ISO 14155</span></div>
+<div class="card"><h3>Auxetic skin grafts</h3><div class="meta mono">Scientific Working class &middot; 07/2025</div><p>Presented a published study on I-shaped incisions that let a skin graft expand further, covering the designs, simulant fabrication, mechanical tests and meshing ratios.</p><span class="tag">biomechanics</span></div>
+<div class="card"><h3>NANOMIT summer school</h3><div class="meta mono">OvGU Magdeburg &middot; 8 to 12 June 2026</div><p>Nanoparticles as contrast agents, X-ray fluorescence imaging, biomarkers, tissue models, with lab sessions, a presentation and an exam.</p><span class="tag">imaging</span><span class="tag">nanomedicine</span></div>
+<div class="card"><h3>Congenital hearing deficiency review</h3><div class="meta mono">Anatomy for Engineering Students</div><p>Team literature review of diagnosis and treatment. I found the original and review articles and wrote the report in a wiki.</p><span class="tag">literature review</span></div>
+</div></section>
+
+<section id="dhf" class="rv"><div class="stage mono">STAGE 05 &middot; DESIGN HISTORY FILE</div><h2>The paper trail</h2>
+<p class="say">Everything above traces back to a record. These are the records.</p>
+<div class="tl">
+<div class="card"><h3>M.Sc. Medical Systems Engineering</h3><div class="meta mono">Otto von Guericke University Magdeburg &middot; since 04/2025</div></div>
+<div class="card"><h3>B.Tech Biomedical Engineering</h3><div class="meta mono">B V Raju Institute of Technology &middot; 12/2020 to 08/2024 &middot; CGPA 7.78</div></div>
+<div class="card"><h3>Certificates</h3><ul><li>NANOMIT course completion, OvGU, 06/2026</li><li>MATLAB Onramp, MathWorks, 05/2026</li><li>DAAD-FIT Bootcamp: scientific writing and goal setting</li></ul></div>
+</div></section>
+
+<section id="bom" class="rv"><div class="stage mono">STAGE 06 &middot; BILL OF MATERIALS</div><h2>What I am made of</h2>
+<p class="say">Each item lists where I actually used it.</p>
+<table><tr><th>Item</th><th>Where I used it</th></tr>
+<tr><td>MATLAB</td><td>Signal processing coursework, MATLAB Onramp 2026</td></tr>
+<tr><td>Python</td><td>Coursework and personal learning</td></tr>
+<tr><td>C++ / Arduino IDE</td><td>Smart Fitness Suit firmware</td></tr>
+<tr><td>ESP32, MPU6050</td><td>Smart Fitness Suit hardware</td></tr>
+<tr><td>Laser cutting, CAD basics</td><td>Idea Lab training and magnetic slime substrate</td></tr>
+<tr><td>LaTeX / Overleaf</td><td>Reports and papers</td></tr>
+<tr><td>EU MDR, ISO 14971, ISO 13485, IEC 62304</td><td>Master&rsquo;s coursework, Cavaterm report</td></tr>
+<tr><td>Calibration and functional testing</td><td>Vardhaman Scientific &amp; Engineers</td></tr></table></section>
+
+<section id="followup" class="rv"><div class="stage mono">STAGE 07 &middot; POST-MARKET FOLLOW-UP</div><h2>Feedback from the field</h2>
+<p class="say">Devices get better from feedback, and so do students. Tell me what I should improve or work on next.</p>
+<p class="mono"><a id="mail" href="#">EMAIL_HERE</a> &nbsp;/&nbsp; <a id="li" href="#">LinkedIn</a> &nbsp;/&nbsp; <a id="gh" href="#">GitHub</a></p></section>
+<footer class="mono">The IFU assistant answers from a fixed set of facts about me. It does not use an external AI service.</footer>
+
+<button id="fab" onclick="openChat()">Read the IFU</button>
+<div id="chat" role="dialog" aria-label="Instructions for use assistant">
+<div id="ch">Instructions for Use<small>Ask about my work. Answers come from my CV and project files.</small></div>
+<div id="msgs"></div><div class="chips" id="chips"></div>
+<form id="f"><input id="q" placeholder="e.g. What did you do at Vardhaman?" autocomplete="off"><button aria-label="Send">&#10148;</button></form>
+</div>
+
+<script>
+/* ===== EDIT THESE ===== */
+const CONFIG={email:"your.email@example.com",linkedin:"https://www.linkedin.com/in/your-profile",github:"https://github.com/your-username"};
+const KB=[
+{k:["who","about","yourself","introduce","summary"],a:"I am Bharadwaja, an M.Sc. Medical Systems Engineering student at OvGU Magdeburg with a B.Tech in Biomedical Engineering. I have worked on medical equipment, published two conference papers, and studied regulatory affairs and medical imaging."},
+{k:["vardhaman","job","work","experience","technician","calibration","service"],a:"At Vardhaman Scientific & Engineers (Hyderabad, 05/2024 to 11/2024) I calibrated and functionally tested BOD incubators, spectrophotometers and digital photometers, documented the tests, installed and troubleshot equipment at hospitals, and supported customers."},
+{k:["slime","magnetic","gi","foreign","ieee","major project"],a:"My B.Tech major project was a magnetic slime steered by an electromagnet to grab objects in a GI-tract replica. The idea was mine and I made the slime and ran most experiments. Published at IEEE ICETEMS 2024. It is a concept study, not a clinical device."},
+{k:["fitness","suit","esp32","imu","mpu","posture","wearable","sensor"],a:"The Smart Fitness Suit checks posture during bicep curls with an ESP32 and two MPU6050 sensors. A buzzer or LED warns the user. I built the prototype and set the gyroscope ranges. Published at ICETE 2023."},
+{k:["cavaterm","mdr","regulatory","ablation","labeling","labelling","clinical evaluation","ifu","report"],a:"In a six-person report on the Cavaterm Class IIb system I wrote the clinical evaluation and study design (endpoints, MCID, sample size, sites) and the labeling and IFU section under EU MDR 2017/745."},
+{k:["publication","paper","published","conference"],a:"Two conference papers: the magnetic slime study (IEEE ICETEMS 2024) and the Smart Fitness Suit (ICETE 2023, Atlantis Press)."},
+{k:["nanomit","summer","nano","imaging","xrf","contrast"],a:"I attended the NANOMIT summer school at OvGU (8 to 12 June 2026): nanoparticles, contrast agents, X-ray fluorescence imaging, biomarkers, a final presentation and an exam."},
+{k:["auxetic","skin","graft","biomechanics"],a:"For the Scientific Working class (07/2025) I presented a published study on I-shaped auxetic incisions for skin grafts: designs, simulant fabrication, mechanical tests and meshing ratios."},
+{k:["skill","tools","programming","matlab","python","c++","arduino","software","bom"],a:"MATLAB, Python, C++ and Arduino, ESP32 and IMU integration, LaTeX, laser cutting and CAD basics. On the regulatory side: EU MDR, ISO 13485, ISO 14971 and IEC 62304 from coursework."},
+{k:["education","study","degree","university","master","bachelor","btech","cgpa","studies"],a:"M.Sc. Medical Systems Engineering at Otto von Guericke University Magdeburg (since 04/2025). B.Tech Biomedical Engineering at B V Raju Institute of Technology (12/2020 to 08/2024, CGPA 7.78)."},
+{k:["language","german","english"],a:"English fluent, German A2."},
+{k:["internship","amtz","training","critical care"],a:"In January 2023 I completed a 62-hour industrial training programme on critical care equipment at AMTZ / IBSC, worth 4 credit points."},
+{k:["looking","seeking","open","role","position","hire","available","target"],a:"I am a Master's student looking for working student, internship and research assistant roles in biomedical engineering, including R&D, medical imaging, signal processing, regulatory affairs and quality."},
+{k:["contact","email","reach","linkedin","github"],a:()=>"Email: "+CONFIG.email+"\nLinkedIn: "+CONFIG.linkedin+"\nGitHub: "+CONFIG.github},
+{k:["hi","hello","hey"],a:"Hello. Ask me about my projects, experience, skills or the roles I am looking for."}
+];
+const CHIPS=["Projects","Work experience","Skills","Publications","Contact"];
+const $=s=>document.querySelector(s);
+$("#mail").href="mailto:"+CONFIG.email;$("#mail").textContent=CONFIG.email;$("#li").href=CONFIG.linkedin;$("#gh").href=CONFIG.github;
+// typed line
+const roles=["M.Sc. Medical Systems Engineering","sensors, imaging and signal processing","regulatory affairs and clinical evaluation"];let ri=0,ci=0,del=false;
+(function t(){const w=roles[ri];$("#typed").textContent=w.slice(0,ci);if(!del&&ci<w.length)ci++;else if(!del){del=true;return setTimeout(t,1400)}else if(ci>0)ci--;else{del=false;ri=(ri+1)%roles.length}setTimeout(t,del?25:55)})();
+// reveal + active stage + progress
+const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add("in")),{threshold:.1});
+document.querySelectorAll(".rv").forEach(e=>io.observe(e));
+const links=[...document.querySelectorAll("nav a")];
+const so=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+x.target.id))}),{rootMargin:"-40% 0px -55% 0px"});
+document.querySelectorAll("section").forEach(s=>so.observe(s));
+addEventListener("scroll",()=>{const d=document.documentElement;$("#bar").style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight)*100)+"%"},{passive:true});
+// chat
+function add(t,c){const m=document.createElement("div");m.className="m "+c;m.textContent=t;$("#msgs").appendChild(m);$("#msgs").scrollTop=1e9}
+function answer(q){q=q.toLowerCase();let best=null,bs=0;for(const e of KB){let s=0;for(const k of e.k)if(q.includes(k))s+=k.length>3?2:1;if(s>bs){bs=s;best=e}}
+if(!best)return"I do not have an answer for that. Try asking about my projects, work experience, skills, publications, education or contact details.";return typeof best.a==="function"?best.a():best.a}
+function ask(q){if(!q.trim())return;add(q,"u");const th=document.createElement("div");th.className="m b";th.textContent="...";$("#msgs").appendChild(th);setTimeout(()=>{th.remove();add(answer(q),"b")},450)}
+function openChat(){const c=$("#chat");c.classList.toggle("open");if(c.classList.contains("open")&&!$("#msgs").children.length)add("This is the instructions for use for my portfolio. What would you like to know?","b")}
+$("#chips").innerHTML=CHIPS.map(c=>"<button>"+c+"</button>").join("");
+$("#chips").onclick=e=>e.target.tagName==="BUTTON"&&ask(e.target.textContent);
+$("#f").onsubmit=e=>{e.preventDefault();ask($("#q").value);$("#q").value=""};
+</script>
+</body>
+</html>
